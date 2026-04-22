@@ -23,7 +23,7 @@ een handige ondersteuning bij het micro:bit robotproject
 Hans Klok  
 Het Lyceum Rotterdam 
 
-![](figures/cover.png)
+![](figures/cover.jpg)
 
 +++
 
