@@ -34,6 +34,7 @@ Dit online tekstboek ondersteunt je tijdens het micro:bit-robotproject bij het b
 ````{grid} 2
 ```{card}
 :header: Basis elektronica
+:link: elektronica.md
 
 Alles over plus, min, stroom, weerstanden en transistoren
 ```
