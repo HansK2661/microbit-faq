@@ -1,5 +1,5 @@
 ---
-title: The TUD starterkit for open publishing with JupyterBook
+title: Micro:bit Robotproject – Schakelingen, sensoren en aansturing
 site:
   hide_outline: true
   hide_toc: true
@@ -15,43 +15,41 @@ no-update-date: true
 
 +++ { "kind": "split-image" }
 
-## The TUD starterkit for open publishing with JupyterBook
+## Micro:bit Robotproject – Schakelingen, sensoren en aansturing
 
-a quick setup for your open publishing project
+een handige ondersteuning bij het micro:bit robotproject
 
-{button}`Check our latest book publication <https://tudelft.nl>`  
 
-Author.  
-Supervisor. 
+Hans Klok  
+Het Lyceum Rotterdam 
 
 ![](figures/cover.png)
 
 +++
 
-This thesis reports on the use of Jupyter Book for open publishing at TU Delft - especially bachelor and master thesis. It provides a quick setup for your open publishing project, including a template and guidelines for using Jupyter Book effectively. The starterkit is designed to help you create and share your research in an open and accessible way.
+Dit online tekstboek ondersteunt je tijdens het micro:bit-robotproject bij het bouwen en testen van schakelingen met sensoren en actuatoren. Je vindt hier korte uitleg, voorbeeldschakelingen en Python-voorbeelden die je helpen wanneer je tijdens het project ergens vastloopt. Gebruik dit boek als eerste hulpmiddel bij technische vragen, zodat je zelfstandig verder kunt werken aan je robot.
 
 +++ {"kind": "justified"}
 ## Quick navigation
 ````{grid} 2
 ```{card}
-:header: 📖 TUD publishing manual
+:header: Basis elektronica
 
-Go to the manual of this starterkit
+Alles over plus, min, stroom, weerstanden en transistoren
 ```
 ```{card}
-:header: 📈 Results
+:header: micro:bit pins
 
-jump to the results
+Overzicht van de pins van de micro:bit: digitaal, analoog, input en output
 ```
 ```{card}
-:header: 📯 Conclusion
+:header: Actuatoren
 
-jump to conclusions
+Het aansturen van motoren, ledjes, grijparmen
 ```
 ```{card}
-:header: 📙 Jupyter book
-:url: https://jupyterbook.org/
+:header: Sensoren
 
-Learn more about Jupyter book
+Het uitlezen van sensoren zoals een lichtsensor of een afstandssensor
 ```
 ````
