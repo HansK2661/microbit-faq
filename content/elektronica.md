@@ -48,6 +48,8 @@ Vuistregel in dit project:
 
 gebruik altijd een weerstand bij een led.
 
+![](figures/weerstand.jpg)
+
 ## Transistoren: schakelen met een klein signaal
 Soms kan de micro:bit een onderdeel niet direct aansturen. Bijvoorbeeld:
 
@@ -71,6 +73,8 @@ micro:bit → transistor → motor
 De micro:bit bestuurt dan de transistor, en de transistor bestuurt de motor.
 
 Zo bescherm je de micro:bit én kun je toch sterke onderdelen gebruiken.
+
+![](figures/transistor.jpg)
 
 ## Samenvatting
 In dit project gebruik je drie belangrijke ideeën:
