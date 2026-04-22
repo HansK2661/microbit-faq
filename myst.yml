@@ -1,8 +1,8 @@
 version: 1
 project:
-  title: TU Delft's JB Starterkit
+  title: Micro:bit Robotproject – Schakelingen, sensoren en aansturing
   # description:
-  keywords: [Jupyter Book, Open Science, TU Delft, Starterkit]
+  keywords: [Jupyter Book, Open Science, TU Delft, Starterkit, micro:bit]
 
   github: https://github.com/TUD-JB-OS/starterkit
   date: 2026-01-31
@@ -32,8 +32,8 @@ site:
   template: book-theme
   options:
     favicon: style/favicon.ico
-    logo: style/tudelft.png
-    logo_dark: style/tudelft-dark.png
+    logo: style/hlr.png
+    logo_dark: style/hlr.png
     hide_authors: true
     style: style/custom.css
   actions:
