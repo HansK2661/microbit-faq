@@ -3,7 +3,7 @@ project:
   toc:
     - file: content/Index.md
     - file: content/Quickstart.md
-    - file: content/Introduction.md
+    - file: content/elektronica.md
     - file: content/wielen.md
     - file: content/Results.ipynb
     - file: content/Conclusion.md
