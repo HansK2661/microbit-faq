@@ -40,6 +40,7 @@ Alles over plus, min, stroom, weerstanden en transistoren
 ```
 ```{card}
 :header: micro:bit pins
+:link: pins.md
 
 Overzicht van de pins van de micro:bit: digitaal, analoog, input en output
 ```
