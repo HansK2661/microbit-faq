@@ -120,6 +120,9 @@ Dus:
 -   1023 = maximaal
 ### Welke pins zijn digitaal en analoog?
 Het verschilt enigzins in de versie van de micro:bit welke pins je kan gebruiken.
+
+![](figures/pins-v1-v2.png)
+
 Sommige pins hebben extra functies.
 
 Bijvoorbeeld:
