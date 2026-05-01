@@ -59,17 +59,98 @@ Voorbeelden:
 -   led aan of uit
 -   motor aan of uit
 
+   
 Python voorbeeld:
 
-    from  microbit  import  *  
-      
-    pin0.write_digital(1)
+```python
+from  microbit  import  *  
+
+pin0.write_digital(1)
+```
 Dit zet pin0 **aan**.
         
 En:
+```python
+from  microbit  import  *
 
-    from  microbit  import  *
-    
-    pin0.write_digital(0)
-
+pin0.write_digital(0)
+```
 zet pin0 **uit**.
+
+### Analoge signalen
+Analoge signalen kunnen **veel waarden tegelijk hebben**.
+
+Bijvoorbeeld:
+
+0 – 1023
+
+Dat gebruik je bij sensoren zoals:
+
+-   lichtsensor
+-   draaiknop
+-   afstandssensor
+
+Python voorbeeld:
+```python
+from  microbit  import  *  
+  
+waarde  =  pin1.read_analog()  
+display.scroll(waarde)
+```
+### Analoge output
+De micro:bit kan ook analoge signalen sturen.
+
+Gebruik dit bijvoorbeeld voor:
+
+-   motorsnelheid
+-   servo-aansturing
+-   helderheid van een led
+```python
+from  microbit  import  *  
+  
+pin0.write_analog(512)
+```
+Waarden liggen tussen:
+
+0 – 1023
+
+Dus:
+
+-   0 = uit
+-   1023 = maximaal
+### Welke pins zijn digitaal en analoog?
+Het verschilt enigzins in de versie van de micro:bit welke pins je kan gebruiken.
+Sommige pins hebben extra functies.
+
+Bijvoorbeeld:
+
+-   verbonden met knoppen
+-   verbonden met led-matrix
+-   gebruikt voor communicatie
+
+De micro:bit heeft een ingebouwd 5×5 led-scherm.
+
+Dit scherm gebruikt intern ook pins.
+
+Daardoor geldt:
+
+sommige pins werken anders wanneer het scherm actief is.
+
+Als je nauwkeurige metingen doet (bijvoorbeeld analoge sensoren), kan het handig zijn om het scherm uit te schakelen:
+```python
+display.off()
+```
+### Voorbeeld: knop als input en led als output
+```python
+from  microbit  import  *  
+  
+while  True:  
+	if  pin1.read_digital():  
+		pin0.write_digital(1)  
+	else:  
+		pin0.write_digital(0)
+```
+Hier gebeurt:
+
+knop ingedrukt → led aan  
+knop los → led uit
