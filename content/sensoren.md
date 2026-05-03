@@ -14,7 +14,7 @@ Er zijn twee soorten signalen die sensoren kunnen geven.
 ### Digitale sensoren
 Digitale sensoren hebben maar twee waarden:
 - 0 = geen signaal
-- - 1 = wel signaal
+- 1 = wel signaal
 
 Bijvoorbeeld:een knop ingedrukt of niet.
 
@@ -22,7 +22,7 @@ Bijvoorbeeld:een knop ingedrukt of niet.
 Analoge sensoren kunnen veel verschillende waarden geven. Bij de micro:bit liggen deze waarden tussen: 0 – 1023
 Bijvoorbeeld:
 - hoe licht het is
-- - hoe ver iets weg is
+- hoe ver iets weg is
 De meeste sensoren in dit project gebruiken **analoge signalen**.
 
 ## Lichtsensor uitlezen
