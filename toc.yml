@@ -5,10 +5,12 @@ project:
     - file: content/Quickstart.md
     - file: content/elektronica.md
     - file: content/pins.md
-    - file: content/wielen.md
-    - file: content/Results.ipynb
-    - file: content/Conclusion.md
-    - title: Appendix
-      children:
-        - file: content/Cheatsheet.md
-        - file: errorlog.md
+    - file: content/actuatoren.md
+    - file: content/sensoren.md
+    - file: content/radio.md
+#    - file: content/Results.ipynb
+#    - file: content/Conclusion.md
+#    - title: Appendix
+#      children:
+#        - file: content/Cheatsheet.md
+#        - file: errorlog.md
