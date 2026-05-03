@@ -76,6 +76,84 @@ Zo bescherm je de micro:bit én kun je toch sterke onderdelen gebruiken.
 
 ![](figures/transistor.jpg)
 
+
+### De drie aansluitingen van een transistor
+
+Een transistor heeft drie pootjes:
+
+| naam | functie |
+|------|---------|
+| Base (B) | stuursignaal van de micro:bit |
+| Collector (C) | verbonden met motor |
+| Emitter (E) | verbonden met GND |
+
+De **base** bepaalt of de transistor aan of uit staat.
+
+### Hoe herken je de juiste kant van de transistor?
+
+Bij de transistor die we in dit project gebruiken (bijvoorbeeld BC547):
+
+- de platte kant zit aan de voorkant
+- de pootjes wijzen naar beneden
+
+Van links naar rechts zijn de pootjes:
+
+
+Collector – Base – Emitter
+
+
+Dus:
+
+| positie | aansluiting |
+|--------|-------------|
+| links | Collector |
+| midden | Base |
+| rechts | Emitter |
+
+Let op: dit geldt alleen als de **platte kant naar je toe wijst**.
+
+### Hoe sluit je een transistor aan?
+
+Sluit de transistor zo aan:
+
+micro:bit pin → weerstand → Base
+Emitter → GND
+Collector → motor
+motor → batterij +
+batterij − → GND
+
+De weerstand tussen pin en base beschermt de micro:bit.
+
+### Waarom zit er een weerstand bij de base?
+
+De base mag niet rechtstreeks op de micro:bit worden aangesloten.
+
+De weerstand:
+
+- beschermt de micro:bit
+- zorgt dat de transistor goed schakelt
+
+Gebruik meestal een weerstand van ongeveer:
+
+
+220Ω – 1kΩ
+
+### Wat gebeurt er als de transistor verkeerd om zit?
+
+Dan gebeurt meestal:
+
+- de motor draait niet
+- of de schakeling werkt onbetrouwbaar
+
+De transistor gaat meestal niet direct kapot, maar de schakeling werkt niet zoals bedoeld.
+
+Controleer daarom altijd:
+
+1. staat de platte kant in de juiste richting?
+2. zitten de pootjes goed aangesloten?
+3. zit er een weerstand tussen pin en base?
+4. is GND goed verbonden?
+
 ## Samenvatting
 In dit project gebruik je drie belangrijke ideeën:
 
