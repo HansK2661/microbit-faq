@@ -138,7 +138,16 @@ Aansluiten (vereenvoudigd):
 
 micro:bit → transistor → motor → batterij
 
-Motor aansturen:
+De base mag niet rechtstreeks op de micro:bit worden aangesloten.
+
+De weerstand:
+
+- beschermt de micro:bit
+- zorgt dat de transistor goed schakelt
+
+![](figures/motor.png)
+
+## Voorbeeldprogramma
 
 ```python
 from microbit import *
