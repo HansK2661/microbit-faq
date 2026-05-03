@@ -3,7 +3,7 @@
 Je kunt twee micro:bits met elkaar laten communiceren via radiosignalen.
 In dit robotproject gebruiken we:
 - één micro:bit als afstandsbediening
-- -één micro:bit op de robot
+- één micro:bit op de robot
 Beide micro:bits krijgen **exact dezelfde programmacode**.
 Daardoor hoef je maar één programma te onderhouden.
 
