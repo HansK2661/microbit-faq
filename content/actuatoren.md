@@ -86,7 +86,7 @@ Controleer dan:
 
 In veel gevallen hoef je de led alleen even om te draaien.
 
-![](figures/led.jpg)
+![](figures/led.png)
 
 ### Voorbeeldprogramma:
 
