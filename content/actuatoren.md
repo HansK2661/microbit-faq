@@ -17,12 +17,76 @@ Een led is de eenvoudigste actuator. Hij kan alleen:
 - aan
 - uit
 
+
+# Hoe sluit je een led goed aan?
+
+Een led werkt maar in **één richting**.  
+Daarom moet je goed opletten welke kant naar **plus** en welke kant naar **min (GND)** gaat.
+
 Een led moet **altijd via een weerstand** worden aangesloten.  
 Zonder weerstand kan de led kapot gaan.
 
 Aansluiten:
 
 P0 → weerstand → led → GND
+
+## Welke kant van een led is plus en min?
+
+Je kunt dit op drie manieren herkennen:
+
+| kenmerk | betekenis |
+|--------|-----------|
+| lange poot | plus (anode) |
+| korte poot | min (kathode) |
+| platte rand van de led | min (kathode) |
+
+Vuistregel:
+
+lange poot → via weerstand naar pin  
+platte kant → naar GND
+
+Dus meestal sluit je een led zo aan:
+
+
+pin → weerstand → lange poot led
+platte kant led → GND
+
+## Waarom moet een led de juiste richting hebben?
+
+Een led is een **diode**.  
+Dat betekent dat stroom er maar in één richting doorheen kan lopen.
+
+Als je hem omdraait:
+
+- gaat de led niet branden
+- maar meestal gaat hij niet kapot (als je een weerstand gebruikt)
+
+## Altijd een weerstand gebruiken
+
+Een led moet **altijd via een weerstand** worden aangesloten.
+
+Zonder weerstand kan:
+
+- de led kapot gaan
+- of de micro:bit beschadigd raken
+
+Gebruik daarom altijd:
+
+pin → weerstand → led → GND
+
+
+## Werkt de led niet?
+
+Controleer dan:
+
+1. zit de platte kant aan GND?
+2. zit er een weerstand in de schakeling?
+3. zit de led goed in het breadboard?
+4. gebruik je de juiste pin in je programma?
+
+In veel gevallen hoef je de led alleen even om te draaien.
+
+![](figures/led.jpg)
 
 Voorbeeldprogramma:
 
