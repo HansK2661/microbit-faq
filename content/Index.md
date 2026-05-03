@@ -33,6 +33,12 @@ Dit online tekstboek ondersteunt je tijdens het micro:bit-robotproject bij het b
 ## Quick navigation
 ````{grid} 2
 ```{card}
+:header: Introductie en coderegels
+:link: Quickstart.md
+
+Een korte introductie over afspraken rondom programmeren
+```
+```{card}
 :header: Basis elektronica
 :link: elektronica.md
 
@@ -46,12 +52,20 @@ Overzicht van de pins van de micro:bit: digitaal, analoog, input en output
 ```
 ```{card}
 :header: Actuatoren
+:link: actuatoren.md
 
 Het aansturen van motoren, ledjes, grijparmen
 ```
 ```{card}
 :header: Sensoren
+:link: sensoren.md
 
 Het uitlezen van sensoren zoals een lichtsensor of een afstandssensor
+```
+```{card}
+:header: Communicatie
+:link: radio.md
+
+Het aansturen van een tweede micro:bit met radiosignalen
 ```
 ````
