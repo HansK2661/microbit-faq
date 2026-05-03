@@ -18,7 +18,7 @@ Een led is de eenvoudigste actuator. Hij kan alleen:
 - uit
 
 
-# Hoe sluit je een led goed aan?
+### Hoe sluit je een led goed aan?
 
 Een led werkt maar in **één richting**.  
 Daarom moet je goed opletten welke kant naar **plus** en welke kant naar **min (GND)** gaat.
@@ -30,7 +30,7 @@ Aansluiten:
 
 P0 → weerstand → led → GND
 
-## Welke kant van een led is plus en min?
+### Welke kant van een led is plus en min?
 
 Je kunt dit op drie manieren herkennen:
 
@@ -51,7 +51,7 @@ Dus meestal sluit je een led zo aan:
 pin → weerstand → lange poot led
 platte kant led → GND
 
-## Waarom moet een led de juiste richting hebben?
+### Waarom moet een led de juiste richting hebben?
 
 Een led is een **diode**.  
 Dat betekent dat stroom er maar in één richting doorheen kan lopen.
@@ -61,7 +61,7 @@ Als je hem omdraait:
 - gaat de led niet branden
 - maar meestal gaat hij niet kapot (als je een weerstand gebruikt)
 
-## Altijd een weerstand gebruiken
+### Altijd een weerstand gebruiken
 
 Een led moet **altijd via een weerstand** worden aangesloten.
 
@@ -75,7 +75,7 @@ Gebruik daarom altijd:
 pin → weerstand → led → GND
 
 
-## Werkt de led niet?
+### Werkt de led niet?
 
 Controleer dan:
 
@@ -88,7 +88,7 @@ In veel gevallen hoef je de led alleen even om te draaien.
 
 ![](figures/led.jpg)
 
-Voorbeeldprogramma:
+### Voorbeeldprogramma:
 
 ```python
 from microbit import *
