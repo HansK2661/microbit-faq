@@ -177,6 +177,7 @@ Belangrijk:
 - De **GND van de batterij en de micro:bit moeten verbonden zijn**  
 - Anders kan de micro:bit het signaal niet goed lezen
 
+![](figures/pir.png)
 
 ## Waarom moet GND gedeeld zijn?
 
