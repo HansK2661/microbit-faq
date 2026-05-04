@@ -157,3 +157,82 @@ while True:
 ```
 
 Test dit eerst voordat je beslissingen toevoegt aan je programma.
+
+## PIR-sensor met externe voeding gebruiken
+
+Sommige PIR-sensoren (zoals de HC-SR505) werken **niet altijd betrouwbaar op 3V**.  
+In dat geval kun je een **externe batterij** gebruiken.
+
+## Aansluiten met externe voeding
+
+Sluit de PIR-sensor zo aan:
+
+VCC → externe batterij (+) (bijv. 3x AA ≈ 4.5V)
+GND → GND batterij én GND micro:bit
+OUT → P1
+
+
+Belangrijk:
+
+- De **GND van de batterij en de micro:bit moeten verbonden zijn**  
+- Anders kan de micro:bit het signaal niet goed lezen
+
+
+## Waarom moet GND gedeeld zijn?
+
+De micro:bit meet spanning ten opzichte van GND.
+
+Als de GND’s niet verbonden zijn:
+
+- krijgt de micro:bit geen stabiel signaal  
+- werkt de sensor niet goed  
+
+
+## PIR uitlezen (zelfde code)
+
+De code verandert niet als je externe voeding gebruikt:
+
+```python
+from microbit import *
+
+# instellingen
+PIR_SENSOR_PIN = pin1
+
+BEWEGING = 1
+GEEN_BEWEGING = 0
+
+
+# programma
+while True:
+    sensorwaarde = PIR_SENSOR_PIN.read_digital()
+
+    if sensorwaarde == BEWEGING:
+        display.show(Image.YES)
+    else:
+        display.clear()
+```
+
+Let op bij hogere spanning
+
+De uitgang (OUT) van de PIR is meestal: ongeveer 3.3V (veilig voor micro:bit)
+
+Daarom kun je deze meestal direct aansluiten op een pin.
+
+Gebruik geen 5V direct op een micro:bit pin.
+
+Wanneer gebruik je externe voeding?
+
+Gebruik een externe batterij als:
+
+- de sensor altijd 1 geeft
+- de sensor niet reageert
+- de sensor instabiel werkt
+## Samenvatting
+
+Bij problemen met een PIR-sensor:
+
+- externe voeding gebruiken
+- GND delen met micro:bit
+- OUT op een pin aansluiten
+
+De code blijft hetzelfde.
