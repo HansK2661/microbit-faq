@@ -197,6 +197,8 @@ while True:
 
 ```
 
+![](figures/afstandssensor_foto.jpeg)
+
 ## PIR-sensor met externe voeding gebruiken
 
 Sommige PIR-sensoren (zoals de HC-SR505) werken **niet altijd betrouwbaar op 3V**.  
