@@ -159,7 +159,7 @@ while True:
 Test dit eerst voordat je beslissingen toevoegt aan je programma.
 
 ## Ultrasone afstandssensor gebruiken
-De ultrasone afstandssensor (met 4 pinnetjes) verzend een ultrasoon geluid en meet de tijd totdat deze terugkomt. Door deze tijd om te rekenen kom je tot een aantal centimeters.
+De ultrasone afstandssensor (met 4 pinnetjes) verzendt een ultrasoon geluid en meet de tijd totdat deze terugkomt. Door deze tijd om te rekenen kom je tot een aantal centimeters.
 
 De 2 buitenste pinnen van de sensor zijn voor de GND en VCC, de binnenste voor de trigger (om het geluid te versturen) en de echo (om het geluid op te vangen).
 
