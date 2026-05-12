@@ -46,7 +46,7 @@ while True:
 
 De micro:bit meet hier steeds hoeveel licht er binnenkomt en toont dit op het display.
 
-## Reageren op licht (beslissing maken)
+### Reageren op licht (beslissing maken)
 
 Je kunt de robot laten reageren op licht.
 
@@ -112,7 +112,7 @@ Let op:
 de exacte betekenis van de waarde hangt af van het type sensor.
 
 
-## Reageren op afstand
+### Reageren op afstand
 
 De robot kan stoppen wanneer een object te dichtbij komt.
 
@@ -137,7 +137,7 @@ while True:
 
 Hier stopt de motor wanneer een obstakel dichtbij komt.
 
-## Sensorwaarden bekijken tijdens testen
+### Sensorwaarden bekijken tijdens testen
 
 Tijdens het bouwen is het handig om eerst alleen de sensorwaarde te bekijken.
 
@@ -204,7 +204,7 @@ while True:
 Sommige PIR-sensoren (zoals de HC-SR505) werken **niet altijd betrouwbaar op 3V**.  
 In dat geval kun je een **externe batterij** gebruiken.
 
-## Aansluiten met externe voeding
+### Aansluiten met externe voeding
 
 Sluit de PIR-sensor zo aan:
 
@@ -220,7 +220,7 @@ Belangrijk:
 
 ![](figures/pir.png)
 
-## Waarom moet GND gedeeld zijn?
+### Waarom moet GND gedeeld zijn?
 
 De micro:bit meet spanning ten opzichte van GND.
 
@@ -230,7 +230,7 @@ Als de GND’s niet verbonden zijn:
 - werkt de sensor niet goed  
 
 
-## PIR uitlezen (zelfde code)
+### PIR uitlezen (zelfde code)
 
 De code verandert niet als je externe voeding gebruikt:
 
@@ -269,12 +269,151 @@ Gebruik een externe batterij als:
 - de sensor altijd 1 geeft
 - de sensor niet reageert
 - de sensor instabiel werkt
-## Samenvatting
 
-Bij problemen met een PIR-sensor:
+## Kleurensensor VEML6040 gebruiken met de micro:bit
 
-- externe voeding gebruiken
-- GND delen met micro:bit
-- OUT op een pin aansluiten
+De VEML6040 RGBW Color Sensor Module is een kleurensensor die licht kan meten.
+De sensor kan vier verschillende waarden uitlezen:
 
-De code blijft hetzelfde.
+R = rood
+G = groen
+B = blauw
+W = wit / totale lichtsterkte
+
+De sensor werkt via een communicatieprotocol dat we ook bij andere sensoren tegenkomen: I2C.
+
+Met deze sensor kun je bijvoorbeeld:
+
+- kleuren herkennen
+- een lijnvolgende robot maken
+- lichtintensiteit meten
+- een sorteersysteem bouwen
+- onderzoeken hoe RGB-kleuren werken
+
+### Aansluiten van de sensor
+
+De sensor heeft vier aansluitingen:
+
+VIN/VCC --> 3V (dus geen 6V!)
+GND --> GND
+SDA --> P20 (aan de zijkant van het breadboard)
+SCL --> P19 (aan de zijkant van het breadboard)
+
+SDA en SCL zijn de twee datalijnen van I2C. We gebruiken hiervoor dus 2 speciale pinnen, P19 en P20. Let er op dat de gaatjes van deze pinnen, en de gaatjes van de sensor, wat groter zijn dan je gewend bent, de stekkertjes blijven hierdoor minder goed vast zitten.
+
+![](figures/kleurensensor.png)
+
+### Hoe werkt I2C?
+
+Bij I2C praten apparaten met elkaar via twee draadjes:
+
+SDA → data
+SCL → kloksignaal
+
+De micro:bit is hierbij de “baas” (master).
+De sensor luistert als “slave”.
+
+Iedere I2C-sensor heeft een eigen adres.
+De VEML6040 gebruikt standaard adres: 0x10 (hexadecimaal)
+
+### Controleren of de sensor werkt
+
+Voordat we waarden uitlezen, controleren we eerst of de micro:bit de sensor ziet.
+
+```python
+from microbit import *
+
+while True:
+    print(i2c.scan())
+    sleep(1000)
+```
+
+Zie je: [16], dan is de verbinding goed. Dit is namelijk gelijk aan 0x10. Hexadecimale getallen worden vaak gebruikt bij I2C-apparaten.
+
+### Sensor inschakelen
+
+De VEML6040 staat standaard soms in een soort slaapstand.
+Daarom moeten we hem eerst aanzetten.
+
+```python
+i2c.write(0x10, bytes([0x00, 0x00, 0x00]))
+```
+
+### RGBW-waarden uitlezen
+
+De sensor bewaart de meetwaarden in zogenaamde registers. We lezen telkens 2 bytes uit een register.
+
+| Register | Betekenis |
+|---|---|
+| 0x08 | Red |
+| 0x09 | Green |
+| 0x0A | Blue |
+| 0x0B | White |
+
+
+```python
+from microbit import *
+
+ADDRESS = 0x10
+
+def read16(register):
+
+    i2c.write(ADDRESS, bytes([register]))
+    data = i2c.read(ADDRESS, 2)
+
+    value = data[0] | (data[1] << 8)
+
+    return value
+
+# VEML6040 inschakelen
+# Register 0x00 = config
+# 0x00, 0x00 betekent: sensor aan, normale meting
+i2c.write(ADDRESS, bytes([0x00, 0x00, 0x00]))
+
+sleep(100)
+
+devices = i2c.scan()
+display.scroll(str(devices))
+
+while True:
+    red   = read16(0x08)
+    green = read16(0x09)
+    blue  = read16(0x0A)
+    white = read16(0x0B)
+
+    print("R:", red,
+          "G:", green,
+          "B:", blue,
+          "W:", white)
+
+    sleep(500)
+```
+### Wat betekenen de waarden?
+
+De R, G en B geven de rode, groene en blauwe waarde aan van het licht. Je kunt kleuren herkennen door waarden met elkaar te vergelijken. Hoe hoger een bepaalde waarde, hoe meer de kleur die richting in gaat.
+
+### Omgevingslicht
+
+De sensor meet licht.
+Dus:
+
+- zonlicht beïnvloedt de meting
+- afstand maakt uit
+- schaduw beïnvloedt de waarden
+
+Daarom krijg je niet altijd exact dezelfde waarden.
+
+### De sensor zelf
+
+De echte sensor is het kleine zwarte chipje midden op het printplaatje.
+Richt dat chipje naar het object dat je wilt meten.
+Geen waarden? Of zie je alleen nullen?
+
+Controleer:
+
+- juiste pinnen?
+- P19 en P20 niet omgedraaid?
+- GND aangesloten?
+- sensor aangezet?
+- voldoende licht?
+
