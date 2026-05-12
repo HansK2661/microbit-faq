@@ -275,10 +275,10 @@ Gebruik een externe batterij als:
 De VEML6040 RGBW Color Sensor Module is een kleurensensor die licht kan meten.
 De sensor kan vier verschillende waarden uitlezen:
 
-R = rood
-G = groen
-B = blauw
-W = wit / totale lichtsterkte
+- R = rood
+- G = groen
+- B = blauw
+- W = wit / totale lichtsterkte
 
 De sensor werkt via een communicatieprotocol dat we ook bij andere sensoren tegenkomen: I2C.
 
@@ -292,12 +292,12 @@ Met deze sensor kun je bijvoorbeeld:
 
 ### Aansluiten van de sensor
 
-De sensor heeft vier aansluitingen:
+De sensor heeft vier aansluitingen, die je op de micro:bit kunt koppelen:
 
-VIN/VCC --> 3V (dus geen 6V!)
-GND --> GND
-SDA --> P20 (aan de zijkant van het breadboard)
-SCL --> P19 (aan de zijkant van het breadboard)
+- VIN/VCC --> 3V (dus geen 6V!)
+- GND --> GND
+- SDA --> P20 (aan de zijkant van het breadboard)
+- SCL --> P19 (aan de zijkant van het breadboard)
 
 SDA en SCL zijn de twee datalijnen van I2C. We gebruiken hiervoor dus 2 speciale pinnen, P19 en P20. Let er op dat de gaatjes van deze pinnen, en de gaatjes van de sensor, wat groter zijn dan je gewend bent, de stekkertjes blijven hierdoor minder goed vast zitten.
 
@@ -404,7 +404,9 @@ Daarom krijg je niet altijd exact dezelfde waarden.
 ### De sensor zelf
 
 De echte sensor is het kleine zwarte chipje midden op het printplaatje.
+
 Richt dat chipje naar het object dat je wilt meten.
+
 Geen waarden? Of zie je alleen nullen?
 
 Controleer:
