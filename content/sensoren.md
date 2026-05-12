@@ -305,8 +305,8 @@ SDA en SCL zijn de twee datalijnen van I2C. We gebruiken hiervoor dus 2 speciale
 
 Bij I2C praten apparaten met elkaar via twee draadjes:
 
-SDA → data
-SCL → kloksignaal
+- SDA → data
+- SCL → kloksignaal
 
 De micro:bit is hierbij de “baas” (master).
 De sensor luistert als “slave”.
