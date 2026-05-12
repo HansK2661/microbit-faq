@@ -147,7 +147,7 @@ De weerstand:
 
 ![](figures/motor.png)
 
-## Voorbeeldprogramma
+### Voorbeeldprogramma
 
 ```python
 from microbit import *
@@ -187,7 +187,7 @@ Dus:
 -   lage waarde = langzaam
 -   hoge waarde = snel
 
-## Grijparm aansturen (servo)
+### Grijparm aansturen (servo)
 
 Een grijparm wordt meestal bestuurd met een **servo-motor**.
 
