@@ -301,8 +301,6 @@ SCL --> P19 (aan de zijkant van het breadboard)
 
 SDA en SCL zijn de twee datalijnen van I2C. We gebruiken hiervoor dus 2 speciale pinnen, P19 en P20. Let er op dat de gaatjes van deze pinnen, en de gaatjes van de sensor, wat groter zijn dan je gewend bent, de stekkertjes blijven hierdoor minder goed vast zitten.
 
-![](figures/kleurensensor.png)
-
 ### Hoe werkt I2C?
 
 Bij I2C praten apparaten met elkaar via twee draadjes:
