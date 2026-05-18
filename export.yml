@@ -11,14 +11,14 @@ project:
       output: exports/report_typst.pdf
       id: report_typst
       cover_page_variant: graphical
-      cover_background_image: content/figures/cover.png
+      cover_background_image: content/figures/cover.jpg
       title_page_variant: "formal"
       title_page_image_anchor: bottom
       title_page_image_width_cm: 3
       title_page_image_dx_cm: 0
       title_page_image_dy_cm: -3.0
       show_cover_full: true
-      show_title_page: true
+      show_title_page: false
       show_title_page_image: false
       show_contributor_affiliations: true
       show_toc: true
